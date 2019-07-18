@@ -1,0 +1,9 @@
+@import '../styles/index.scss';
+
+.bio_wrapper{
+    text-align:center;
+}
+
+.bio_title{
+    @include typographyHeader();
+}

@@ -1,0 +1,12 @@
+@import '../styles/index.scss';
+
+.title {
+    @include typographyTitle();
+    display: inline-block;
+    padding: 8px 10px;
+    border: 5px solid $pink;
+}
+
+.title_wrapper{
+    text-align:center;
+}

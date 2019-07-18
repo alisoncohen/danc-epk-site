@@ -1,4 +1,5 @@
 import React from "react"
+import * as styles from "./header.module.scss"
 
 type THeaderProps = {
     title: string
@@ -6,7 +7,9 @@ type THeaderProps = {
 
 function Header({title}: THeaderProps){
     return(
-        <h1>{title}</h1>
+        <div className={styles.title_wrapper}>
+            <h1 className={styles.title}>{title}</h1>
+        </div>
     )
 }
 

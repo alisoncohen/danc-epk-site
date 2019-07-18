@@ -1,0 +1,31 @@
+    
+$mapLineHeightFromFontSize: (
+    $fontSizeXSmall: $lineHeightXSmall,
+    $fontSizeSmall: $lineHeightSmall,
+    $fontSizeRegular: $lineHeightRegular,
+    $fontSizeMedium: $lineHeightMedium,
+    $fontSizeMedLarge: $lineHeightMedLarge,
+    $fontSizeMedPlus: $lineHeightMedPlus,
+    $fontSizeLarge: $lineHeightLarge,
+    $fontSizeXLarge: $lineHeightXLarge,
+    $fontSizeXLargePlus: $lineHeightXLargePlus,
+    $fontSizeXXLarge: $lineHeightXXLarge
+  );
+
+@mixin typography($fontSize, $fontWeight){
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: map-get($mapLineHeightFromFontSize, $fontSize);
+}
+
+@mixin typographyTitle(){
+    @include typography($fontSizeXXLarge, $fontWeightSemibold);
+    white-space: nowrap;
+}
+
+@mixin typographyHeader(){
+    @include typography($fontSizeLarge, $fontWeightMedium);
+    color: $grey;
+}
